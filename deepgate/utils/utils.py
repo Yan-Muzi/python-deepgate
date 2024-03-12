@@ -203,6 +203,6 @@ def generate_hs_init(G, hs, no_dim):
         pi_vec, batch_max_sim = generate_orthogonal_vectors(len(pi_node), no_dim)
         if batch_max_sim > max_sim:
             max_sim = batch_max_sim
-        hs[pi_node] = torch.tensor(pi_vec, dtype=torch.float)
+        hs[pi_node] = torch.tensor(np.array(pi_vec), dtype=torch.float)
     
     return hs, max_sim
